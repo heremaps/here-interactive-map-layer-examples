@@ -1,0 +1,271 @@
+/*
+ * Copyright (C) 2022 HERE Europe B.V.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ * License-Filename: LICENSE
+ */
+body {
+    font-family: FiraGO,"Noto Sans JP",Tahoma,Calibri,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #6d6178;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: .1px;
+    color: #3f454d;
+}
+
+p, button {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: var(--body-copy-line-height);
+    letter-spacing: .1px;
+}
+.map {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+.map {
+    background: #262626;
+}
+#info, #info2 {
+    position: absolute;
+    width: 300px;
+    background-color: white;
+    margin: 15px;
+    padding: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#info2 {
+    right: 5px;
+    width: 400px;
+}
+
+#slider {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 300px;
+    background-color: #eef;
+    margin: 10px;
+    margin-bottom: 40px;
+    padding: 6px;
+    transform: translateX(-160px);
+    opacity: 0.7
+}
+#scale {
+    display: inline-block;
+    width: 350px;
+}
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 1000ms, opacity 1000ms;
+  }
+
+#range {
+    margin-bottom: 5px;
+}
+
+.space0{
+    margin-right: 6px; 
+    display: inline-block;
+}
+.space1{
+    margin-right: 59px; 
+    display: inline-block;
+}
+.space2{
+    margin-right: 63px; 
+    display: inline-block;
+}
+.space3{
+    margin-right: 61px; 
+    display: inline-block;
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+    width: 100%;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: grey;
+    margin-top: -5px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+#clustering-switch{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin: 10px;
+    padding: 4px;
+    transform: translateX(-164px);
+}
+.btn-group button{
+    background-color: #00AFAA;
+    border: 1px solid #00AFAA; 
+    color: white; 
+    padding: 3px 1px;
+    cursor: pointer;
+    float: left;
+    width: 156px;
+  }
+
+  
+  .btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+  }
+  
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .btn-group button:hover {
+    background-color: #007c78;
+  }
+
+  .btn-group .active {
+    background-color: #007c78;
+  }
+
+  .retail-btn-group button{
+    background-color: white;
+    border: 1px solid #00AFAA; 
+    font-size: 10px;
+    color: #6d6178;
+    padding: 3px 1px;
+    margin-top: 2px;
+    cursor: pointer;
+    float: left;
+    width: 38px;
+  }
+  .retail-btn-group button:first-child {
+    border-top-left-radius: 3px; 
+    border-bottom-left-radius: 3px; 
+  }
+  .retail-btn-group button:last-child {
+    border-top-right-radius: 3px; 
+    border-bottom-right-radius: 3px; 
+  }
+  .retail-btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+  }
+  
+  .retail-btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .retail-btn-group .active {
+    background-color: #007c78;
+    color: white;
+  }
+
+  .ol-zoom{
+    z-index: 1000;
+    top: auto;
+    bottom: 1.5em;
+    left: 1em;
+ }
+ 
+ #quantiles table{
+    width: 95%; 
+    font-size: 13px;
+ }
+ #quantiles table td span{
+    width: 38%; 
+    text-align: center;
+    display: inline-block;
+ }
+ #quantiles table td .to{
+    width: 15%; 
+ }
+
+.shepherd-element {
+    background: none;
+    box-shadow: none;
+}
+.shepherd-content {
+    background: white;
+    margin: 13px;
+}
+.shepherd-arrow {
+    margin-left: 13px;
+}
+.first-step {
+    background: white;
+    max-width: 800px;
+}
+
+.last-step .shepherd-arrow {
+    margin-left: 0px;
+    margin-bottom: 13px;
+}
+
+.first-step .shepherd-content{
+    background: rgba(255, 255, 255, 0);
+}
+
+.shepherd-content .shepherd-text{
+    color: #6D6179;
+}
+
+.shepherd-enabled .shepherd-content .shepherd-header {
+    background: rgba(255, 255, 255, 0);
+    align-items: flex-start;
+}
+.shepherd-enabled .shepherd-content .shepherd-header h3{
+  width: 90%;
+}
+
+.shepherd-content .shepherd-header h3{
+  color: #6D6179;
+  line-height: 20px;
+}
+
+.shepherd-content .shepherd-header span{
+  color: #6D6179;
+}

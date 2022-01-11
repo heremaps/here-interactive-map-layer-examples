@@ -1,0 +1,85 @@
+<!--
+  ~ Copyright (C) 2022 HERE Europe B.V.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  ~ SPDX-License-Identifier: Apache-2.0
+  ~ License-Filename: LICENSE
+  -->
+
+<!DOCTYPE html>
+<html>
+ <head>
+   
+   <meta name="twitter:card" content="summary_large_image" />
+   <meta name="twitter:site" content="@here" />
+   <meta name="twitter:title" content="Spatial and property search with Interactive Map Layers" />
+   <meta name="twitter:description" content="Explore sport facilities in the city of Amsterdam and find the administrative areas that contain facilities of a certain type." />
+   <meta name="twitter:image" content="https://heremaps.github.io/here-interactive-map-layer-examples/spatial-and-property-search-2/opengraph.png" />
+   
+   <meta property="og:url" content="https://heremaps.github.io/here-interactive-map-layer-examples/spatial-and-property-search-2/" />
+   <meta property="og:type" content="website" />
+   <meta property="og:title" content="Spatial and property search with Interactive Map Layers" />
+   <meta property="og:description" content="Explore sport facilities in the city of Amsterdam and find the administrative areas that contain facilities of a certain type." />
+   <meta property="og:image" content="https://heremaps.github.io/here-interactive-map-layer-examples/spatial-and-property-search-2/opengraph.png" />
+
+    <title>Spatial and property search with Interactive Map Layers</title>
+
+    <link rel="stylesheet" href="index.css" />
+    <script type="module" src="index.js"></script>
+ </head>
+ <body>
+    <div id="map"></div>
+    <div id="overlay">
+      <h3>Sport facilities</h3>
+      <div id="overlay-sport">
+         <p>Explore administrative areas of Amsterdam which provides sport facilities.</p>
+         <div id="sports">
+            <div class="line-parent"><div class="line" style="background: #55b6fc;"></div><input id="Skate" type="radio" name="sport" checked value="Skate"/><label for="Skate">Skate</label></div>
+            <div class="line-parent"><div class="line" style="background: #fc8c54;"></div><input id="Tennis" type="radio" name="sport" value="Tennis"/><label for="Tennis">Tennis</label></div>
+            <div class="line-parent"><div class="line" style="background: #9c56fb;"></div><input id="Basketball" type="radio" name="sport" value="Basketbal"/><label for="Basketball">Basketball</label></div>
+            <div class="line-parent"><div class="line" style="background: #7FFC54;"></div><input id="Soccer" type="radio" name="sport" value="Voetbal"/><label for="Soccer">Soccer</label></div>
+            <div class="line-parent"><div class="line" style="background: #919191;"></div><input id="Jeu" type="radio" name="sport" value="Jeu de boules"/><label for="Jeu">Jeu de boules</label></div>
+            <div class="line-parent"><div class="line" style="background: #BA0003;"></div><input id="Fitness" type="radio" name="sport" value="Fitness / Bootcamp"/><label for="Fitness">Fitness / Bootcamp</label></div>
+            <div class="line-parent"><div class="line" style="background: #035DBA;"></div><input id="Tabletennis" type="radio" name="sport" value="Tafeltennis"/><label for="Tabletennis">Table tennis</label></div>
+            <div class="line-parent"><div class="line" style="background: #00B086;"></div><input id="Beachvolley" type="radio" name="sport" value="Beachvolley"/><label for="Beachvolley">Beachvolley</label></div>
+            <div class="line-parent"><div class="line" style="background: #FEFF00;"></div><input id="Other" type="radio" name="sport" value="Overig"/><label for="Other">Other</label></div>
+         </div>
+      </div>
+      <div id="overlay-areas">
+         <p>Administrative area level:</p>
+         <div id="ad-level" class="line-parent"><div class="line areas" style="background: #BFBFBF;"></div><input id="Neighbourhoods" type="radio" name="areas" checked value="neighbourhoods"/><label for="Neighbourhoods">Neighbourhoods</label></div>
+         <div class="line-parent"><div class="line areas" style="background: #AFAFAF;"></div><input id="Quarters" type="radio" name="areas" value="quarters"/><label for="Quarters">Quarters</label></div>
+         <div class="line-parent"><div class="line areas" style="background: #9F9F9F;"></div><input id="Areas" type="radio" name="areas" value="areas"/><label for="Areas">Areas</label></div>
+         <div class="line-parent"><div class="line areas" style="background: #8F8F8F;"></div><input id="Districts" type="radio" name="areas" value="city-districts"/><label for="Districts">City districts</label></div>
+      </div>
+    </div>
+    <div id="info">
+       <div id="intro">
+
+         <h3>HERE Interactive Map Layer: Spatial and Property Search</h3>
+
+         <p>Features stored in Interactive Map Layers can be retrieved by spatial and/or property search queries. The spatial search query could be used to retrieve features that intersect a given point, line or area. This is provided to the API as a GeoJSON geometry. Additionally, a radius parameter defined in meters could be specified.</p>
+         <p>The property search query could be used to retrieve features that have a property value that matches a given value. It is possible to search for numeric ranges, to query multiple property values, and to combine the queries using logical operators. Property search can be combined with requests for tile, bounding box and spatial search.</p>
+         <p>This example includes a map to explore sport facilities in the city of Amsterdam. Amsterdam manages 26 sports parks, 19 sports centres, 10 swimming pools and over 100 smaller sports facilities in various neighbourhoods.</p>
+         <p>Property search is used to filter the features by the type of sport. The locations of the facilities are combined as a multipoint geometry. This geometry then used as an input for the spatial search query to find the administrative areas that contain the facilities of that type.</p>
+       </div>
+       <div id="source">
+          <p>This example uses: Interactive API, XYZ Maps</p>
+          <p>Data source: <a href="https://maps.amsterdam.nl/">City of Amsterdam</a></p>
+          <p>Source code: <a href="https://github.com/heremaps/here-interactive-map-layer-examples/blob/main/examples/spatial-and-property-search-1">GitHub</a></p>
+       </div> 
+    </div>
+    <div id="request-info"><div id="requests"></div></div>
+ </body>
+</html>

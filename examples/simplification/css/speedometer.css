@@ -1,0 +1,119 @@
+/*
+ * Copyright (C) 2021 HERE Europe B.V.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ * License-Filename: LICENSE
+ */
+#meter-container{
+  position: absolute; 
+  left: 130px; 
+  top: 320px; 
+  width: 200px;
+  height: 250px; 
+}
+
+.meter{
+  position: absolute; 
+  left: 5px; 
+  top: 0; 
+  width: 150px; 
+  height: 150px; 
+  border: 1px #6d6178 solid; 
+  border-radius: 50%;
+  border-bottom: solid transparent;
+}
+
+.info1{
+  position: absolute; 
+  font-size: 20px; 
+  width: 100%; 
+  text-align: center; 
+  top: 90px; 
+  font-weight: bold; 
+}
+.info2 {
+  position: absolute; 
+  font-size: 14px; 
+  text-align: left; 
+  font-weight: bold; 
+  left: 35px;
+  top: 128px;
+}
+.info3 {
+  position: absolute; 
+  font-size: 14px; 
+  text-align: left; 
+  font-weight: bold; 
+  top: 150px;
+  left: -10px;
+  width: 200px;
+}
+.info4 {
+  position: absolute; 
+  font-size: 14px; 
+  text-align: left; 
+  font-weight: bold; 
+  top: 128px;
+  width: 200px;
+}
+
+.graduation{
+  position: absolute;
+  width: 10px; 
+  height: 2px; 
+  background: #6d6178; 
+}
+
+.graduation1{transform: rotate(-22.5deg); left: 19px; top: 95px;}
+.graduation2{left: 16px; top: 74px; width: 5px;}
+.graduation3{transform: rotate(22.5deg); left: 19px; top: 53px;}
+.graduation4{transform: rotate(45deg); left: 33px; top: 33px; width: 5px;}
+.graduation5{transform: rotate(67.5deg); top: 23px; left: 49px;}
+.graduation6{transform: rotate(90deg); left: 73px; top: 16px; width: 5px;}
+.graduation7{transform: rotate(112.5deg); right: 49px; top: 23px;}
+.graduation8{transform: rotate(135deg); right: 32px; top: 34px; width: 5px;}
+.graduation9{transform: rotate(157.5deg); right: 19px; top: 53px;}
+.graduation10{transform: rotate(180deg); right: 16px; top: 74px; width: 5px;}
+.graduation11{transform: rotate(202.5deg); right: 19px; top: 95px;}
+
+.meter .indicator{
+  position: absolute; 
+  border-style: solid; 
+  border-width: 4px 50px 4px 0; 
+  border-color: transparent #ef2110 transparent transparent; 
+  right: 50%; 
+  top: 50%; 
+  margin: -4px 0 0 0; 
+  transform: rotate(45deg);
+  transform-origin: 50px 4px;
+}
+
+.scale{
+  position: absolute; 
+  font-size: 14px; 
+}
+
+.scale1 {left: 2px; top: 92px;font-size: 12px;}
+.scale2 {left: 0px; top: 67px;}
+.scale3 {left: 5px; top: 42px;}
+.scale4 {left: 19px; top: 19px;}
+.scale5 {left: 42px; top: 4px;}
+.scale6 {left: 67px; top: -2px;}
+.scale7 {right: 42px; top: 4px;}
+.scale8 {right: 21px; top: 19px;}
+.scale9 {right: 9px; top: 42px;}
+.scale10 {right: 5px; top: 67px;}
+.scale11 {right: 9px; top: 91px;}
+

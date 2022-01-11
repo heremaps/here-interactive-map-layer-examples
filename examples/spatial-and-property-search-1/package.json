@@ -1,0 +1,36 @@
+{
+  "name": "@here/here-interactive-map-layer-examples-sport-facilities",
+  "version": "1.0.0",
+  "description": "Spatial and property search with Interactive Map Layers. Example 1",
+  "scripts": {
+    "build": "rollup -c",
+    "start": "yarn run build && npx http-server ./dist/ -p 0 -c-1 -o",
+    "set-api-key": "node ../../scripts/setCredentials.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heremaps/here-interactive-map-layer-examples.git",
+    "directory": "examples/spatial-and-property-search-1"
+  },
+  "author": {
+    "name": "HERE Europe B.V.",
+    "url": "https://here.com"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "http-server": "^14.0.0",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "postcss": "^8.4.4",
+    "rollup": "^2.60.2",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-uglify": "^6.0.4"
+  },
+  "dependencies": {
+    "@here/xyz-maps-common": "^0.26.0",
+    "@here/xyz-maps-core": "^0.26.0",
+    "@here/xyz-maps-display": "^0.26.0",
+    "shepherd.js": "^8.3.1"
+  }
+}

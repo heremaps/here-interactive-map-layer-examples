@@ -1,0 +1,37 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set-up Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "12"
+
+      - name: Set-up HERE public repository
+        run: yarn config set @here:registry https://repo.platform.here.com/artifactory/api/npm/maps-api-for-javascript/
+      
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Set HERE Platform API Key
+        run: yarn set-api-key ${{ secrets.API_KEY }}
+
+      - name: Build examples
+        run: yarn build
+
+      - name: Deploy
+        uses: crazy-max/ghaction-github-pages@v1
+        with: 
+          target_branch: gh-pages
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 

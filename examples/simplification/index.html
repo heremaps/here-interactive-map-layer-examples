@@ -1,0 +1,128 @@
+<!--
+  ~ Copyright (C) 2022 HERE Europe B.V.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  ~ SPDX-License-Identifier: Apache-2.0
+  ~ License-Filename: LICENSE
+  -->
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@here" />
+    <meta name="twitter:title" content="Geometry simplification with Interactive Map Layers" />
+    <meta name="twitter:description" content="Visualize long routes with Interactive Map Layers." />
+    <meta name="twitter:image" content="https://heremaps.github.io/here-interactive-map-layer-examples/simplification/opengraph.png" />
+
+    <meta property="og:url" content="https://heremaps.github.io/here-interactive-map-layer-examples/simplification/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Geometry simplification with Interactive Map Layers" />
+    <meta property="og:description" content="Visualize long routes with Interactive Map Layers." />
+    <meta property="og:image" content="https://heremaps.github.io/here-interactive-map-layer-examples/simplification/opengraph.png" />
+
+    <title>Geometry simplification with Interactive Map Layers</title>
+
+    <script type="module" src='index.js'></script>
+    <link rel="stylesheet" href="index.css" />
+
+  </head>
+  <body>
+    <div id="mapmvt"></div>
+    <div class="page-header">
+      <h3>Routes</h3>
+      <div id="firstpart">
+        <p>Select a route:</p>
+        <div id="buttons">
+          <div id="routa" class="button" value="a">Houston -> Washington D.C.</div>
+          <div id="routb" class="button" value="b">Paris -> Moscow</div>
+        </div>
+      </div>
+      <div id="secondpart">
+        <p id="a">Interactive Map Layer reduces the geometry size of the route from Houston to Washington D.C. from <b>22408</b> to <b>1426</b> at zoomlevel <b>1</b> </p>
+        <p id="b" class="hidden">Interactive Map Layer reduces the geometry size of the route from Paris to Moscow from <b>31600</b> to <b>2336</b> at zoomlevel <b>1</b></p>
+      
+        <div id="scale">
+          <div id="gradulation">
+            <span class="zlevel">1&nbsp;</span><span class="pointscnt">- 350</span><br>
+            <span class="zlevel">2&nbsp;</span><span class="pointscnt">- 701</span><br>
+            <span class="zlevel">3&nbsp;</span><span class="pointscnt">- 1394</span><br>
+            <span class="zlevel">4&nbsp;</span><span class="pointscnt">- 2704</span><br>
+            <span class="zlevel">5&nbsp;</span><span class="pointscnt">- 5112</span><br>
+            <span class="zlevel">6&nbsp;</span><span class="pointscnt">- 9087</span><br>
+            <span class="zlevel">7&nbsp;</span><span class="pointscnt">- 14301</span><br>
+            <span class="zlevel">8&nbsp;</span><span class="pointscnt">- 18988</span><br>
+            <span class="zlevel">9&nbsp;</span><span class="pointscnt">- 21346</span><br>
+            <span class="zlevel">10&nbsp;</span><span class="pointscnt">- 22206</span><br>
+            <span class="zlevel">≥11&nbsp;</span><span class="pointscnt">- 22408</span><br>
+          </div>
+          <!-- <svg width="208" height="208" id="index">
+            <line x1="0" y1="9.5" x2="208" y2="9.5" style="stroke:#6d6178;stroke-width:2;" shape-rendering="crispEdges"></line>
+            <line x1="0" y1="9.5" x2="141" y2="9.5" style="stroke:#ef2110;stroke-width:6" shape-rendering="crispEdges"></line>
+          </svg> -->
+
+          <div id="meter-container">
+            <div class="meter">
+              <div class="graduation graduation1"></div>
+              <div class="graduation graduation2"></div>
+              <div class="graduation graduation3"></div>
+              <div class="graduation graduation4"></div>
+              <div class="graduation graduation5"></div>
+              <div class="graduation graduation6"></div>
+              <div class="graduation graduation7"></div>
+              <div class="graduation graduation8"></div>
+              <div class="graduation graduation9"></div>
+              <div class="graduation graduation10"></div>
+              <div class="graduation graduation11"></div>
+              <div class="indicator"></div>
+              <div class="info1">12%</div>
+              <div class="info2">Zoomlevel: 4</div>
+              <div class="info3">Geometry: 2704 of 22408</div>
+
+              <div class="scale scale11">1</div>
+              <div class="scale scale10">3</div>
+              <div class="scale scale9">6</div>
+              <div class="scale scale8">12</div>
+              <div class="scale scale7">22</div>
+              <div class="scale scale6">40</div>
+              <div class="scale scale5">63</div>
+              <div class="scale scale4">84</div>
+              <div class="scale scale3">95</div>
+              <div class="scale scale2">99</div>
+              <div class="scale scale1">100</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="anchorpoint"></div>
+
+    <div id="info">
+      <div id="intro">
+        <h3>Geometry simplification with Interactive Map Layers</h3>
+        <p>Map features stored in Interactive Map Layers can be retrieved as tiles. Interactive Map Layers offers the ability to simplify the geometry of the features in the tiles by simply including the parameter <i>mode=viz</i>. This can be useful for reducing the amount of data that needs to be transferred to the client and helps the client to render the data faster.</p>
+        <p>In this example two very long routes, containing <b>31,600</b> and <b>22,408</b> coordinates respectively, were created using the HERE Routing API. The tiles returned by Interactive API, contain a simplified version of the route geometry optimized for the zoom level of the map. There is no visual difference between the original and the simplified geometry at the requested zoom level. However, the simplified geometry contains a significantly reduced number of coordinates.</p>
+      </div>
+      <div id="source">
+         <p>This example uses: Interactive API, Leaflet, Tangram</p>
+         <p>Data source: Routes calculated by <a href="https://developer.here.com/documentation/routing-api/dev_guide/index.html" target="_new">HERE Routing API</a></p>
+         <p>Source code: <a href="https://github.com/heremaps/here-interactive-map-layer-examples/blob/main/simplification">GitHub</a></p>
+      </div> 
+    </div>
+
+  </body>
+</html>

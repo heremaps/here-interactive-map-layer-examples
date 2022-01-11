@@ -1,0 +1,115 @@
+global:
+    APIKey: YOUR_API_KEY
+sources:
+    here-vector:
+        type: MVT
+        url: https://vector.hereapi.com/v2/vectortiles/base/mc/{z}/{x}/{y}/omv
+        max_zoom: 16
+        tile_size: 512
+        url_params:
+            apiKey: global.APIKey
+            mode: viz
+        min_display_zoom: 0
+        max_display_zoom: 18
+
+    iml-data:
+        type: MVT
+        url: https://interactive.data.api.platform.here.com/interactive/v1/catalogs/hrn:here:data::olp-here:dh-showcase-long-routes/layers/routes/tile/web/{z}_{x}_{y}.mvt
+        url_params:
+            apiKey: global.APIKey
+            mode: viz
+            #selection: "*"
+        max_zoom: 20
+        min_display_zoom: 0
+        max_display_zoom: 18
+
+styles:
+    routes:
+        base: lines
+        blend: overlay
+        blend_order: 2
+        material:
+            diffuse: [0.282, 0.255, 0.916, 0.2]
+            shininess: 5.0
+            specular: white
+layers:
+    boundaries:
+        data: { source: here-vector, layer: boundaries }
+        enabled: true
+        # country subdivisions (states, provinces)
+        draw:
+            lines:
+                order: 8
+        country:
+            filter:
+                any:
+                    - kind: country
+                    - admin_level: 2
+            draw:
+                country-outerline:
+                    style: lines
+                    order: 8
+                    color: '#383C45'
+                    width: [[0, 0px], [4, 1px], [8, 1px], [14, 1px], [17, 14m]]
+                lines:
+                    color: '#383C45'
+                    width: [[0, 0px], [5, 0px], [6, 1px], [14, 2px]]
+    places:
+        data: { source: here-vector }
+    water:
+        data: { source: here-vector }
+        draw:
+            polygons:
+                order: 2
+                color: '#0F1621'
+    earth:
+        data: { source: here-vector }
+        draw:
+            polygons:
+                order: 1
+                color: '#000'
+            lines:
+                order: 2
+                color: '#383C45'
+                width: 1px
+    roads:
+        data: { source: here-vector}
+        filter: { not: { kind: [rail, ferry] } }
+        draw:
+            lines:
+                order: 4
+                color: '#666666'
+                width: [[7,0.0px], [10, .5px], [15, .75px], [17, 5m]]
+        highway:
+            filter: { kind: highway }
+            draw:
+                lines:
+                    order: 5
+                    width: [[8,0px], [8,.25px], [11, 1.5px], [14, 2px], [16, 4px], [17, 10m]]
+            link:
+                filter: { is_link: true } # on- and off-ramps, etc
+                draw:
+                    lines:
+                        width: [[8,0px], [14, 3px], [16, 5px], [18, 10m]]
+                tunnel-link:
+                    filter: {is_tunnel: true, $zoom: {min: 13} }
+        tunnel:
+            filter: {is_tunnel: true }
+            draw:
+                lines:
+                    order: 6
+    buildings:
+        data: { source: here-vector }
+        draw:
+            polygons:
+                order: 7
+                color: '#0F1621'
+                extrude: false
+    routes:
+        data: { source: iml-data, layer: 'hrn:here:data::olp-here:dh-showcase-long-routes:routes' }
+        draw:
+            lines:
+                order: 8
+                width : [[1,3px], [4,4px],[10,5px], [20,20m]]
+                # collide: false
+                color: blue

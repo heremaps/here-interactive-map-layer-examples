@@ -1,0 +1,87 @@
+<!--
+  ~ Copyright (C) 2022 HERE Europe B.V.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  ~ SPDX-License-Identifier: Apache-2.0
+  ~ License-Filename: LICENSE
+  -->
+
+<html xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@here" />
+    <meta name="twitter:title" content="Data sampling with HERE Interactive Map Layers" />
+    <meta name="twitter:description" content="A cadastral map with the trees in maintenance of the city of Amsterdam." />
+    <meta name="twitter:image" content="https://heremaps.github.io/here-interactive-map-layer-examples/sampling/opengraph.png" />
+
+    <meta property="og:url" content="https://heremaps.github.io/here-interactive-map-layer-examples/sampling/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Data sampling with HERE Interactive Map Layers" />
+    <meta property="og:description" content="A cadastral map with the trees in maintenance of the city of Amsterdam." />
+    <meta property="og:image" content="https://heremaps.github.io/here-interactive-map-layer-examples/sampling/opengraph.png" />
+
+    <title>Data sampling with HERE Interactive Map Layers</title>
+
+    <link rel="stylesheet" href="index.css" />
+    <script type="module" src='index.js'></script>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div class="page-header">
+      <h3>Trees in maintenance of City of Amsterdam</h3>
+
+      <div id="overlay-trees">
+        <p>Select tree species to visualize:</p>
+        <div id="trees">
+           <div class="line-parent"><div class="line" style="background: #c8ffb6;"></div><input id="All" type="radio" name="tree" checked value="All" /><label class="treelabel" for="All">All</label><label>- 259,431</label></div>
+           <div class="line-parent"><div class="line" style="background: #9acd32;"></div><input id="Elm" type="radio" name="tree" value="Ulmus" /><label class="treelabel" for="Elm">Elm</label><label>- 31,327</label></div>
+           <div class="line-parent"><div class="line" style="background: #00a44a;"></div><input id="Linden" type="radio" name="tree" value="Tilia" /><label class="treelabel" for="Linden">Linden</label><label>- 26,195</label></div>
+           <div class="line-parent"><div class="line" style="background: #c2d400;"></div><input id="Maple" type="radio" name="tree" value="Acer" /><label class="treelabel" for="Maple">Maple</label><label>- 25,641</label></div>
+           <div class="line-parent"><div class="line" style="background: #4dd14d;"></div><input id="Ash" type="radio" name="tree" value="Fraxinus" /><label class="treelabel" for="Ash">Ash</label><label>- 19,217</label></div>
+           <div class="line-parent"><div class="line" style="background: #79bd79;"></div><input id="Plane" type="radio" name="tree" value="Platanus" /><label class="treelabel" for="Plane">Plane</label><label>- 15,413</label></div>
+           <div class="line-parent"><div class="line" style="background: #0064e0;"></div><input id="Poplar" type="radio" name="tree" value="Populus" /><label class="treelabel" for="Poplar">Poplar</label><label>- 12,900</label></div>
+           <div class="line-parent"><div class="line" style="background: #58AD9F;"></div><input id="Alder" type="radio" name="tree" value="Alnus" /><label class="treelabel" for="Alder">Alder</label><label>- 12,372</label></div>
+           <div class="line-parent"><div class="line" style="background: #33d1dd;"></div><input id="Willow" type="radio" name="tree" value="Salix" /><label class="treelabel" for="Willow">Willow</label><label>- 12,252</label></div>
+           <div class="line-parent"><div class="line" style="background: #6495ed;"></div><input id="Birch" type="radio" name="tree" value="Betula" /><label class="treelabel" for="Birch">Birch</label><label>- 11,277</label></div>
+           <div class="line-parent"><div class="line" style="background: #BA55d3;"></div><input id="Cherry" type="radio" name="tree" value="Prunus" /><label class="treelabel" for="Cherry">Cherry</label><label>- 11,245</label></div>
+          </div>
+     </div>
+    </div>
+
+    <div id="info">
+      <div id="intro">
+        <h3>Interactive Map Layers: Data Sampling</h3>
+        <p>One of the features offered by Interactive Map Layers is data sampling. Data sampling makes possible to efficiently render an excerpt of a very large data set for visual reference and analysis, without the need to transfer all the data to the client.</p>
+        <p>This example includes a cadastral map to explore the trees in maintenance of the city of Amsterdam. Each of the <b>259,431</b> trees is stored as an individual map feature.</p>
+        <p>By including the parameter <i>mode=viz</i> the Interactive API is instructed to return the data optimized for visualization. On map zoom levels, where there are too many features, the tiles returned by Interactive API include only a sample with a geographically accurate representation of the data.</p>
+      </div>
+      <div id="source">
+        <p>This example uses: Interactive API, <a href="https://developer.here.com/develop/javascript-api">HERE Maps API for Javascript</a></p>
+        <p>Data source: <a href="https://maps.amsterdam.nl/">City of Amsterdam</a></p>
+        <p>Source code: <a href="https://github.com/heremaps/here-interactive-map-layer-examples/blob/main/examples/sampling">GitHub</a></p>
+      </div> 
+    </div>
+    <div id="switch">
+      Sampling strength:
+      <div class="btn-group">
+        <button value='low'>Low</button>
+        <button value='med'>Med</button>
+        <button class='active'  value='high'>High</button>
+      </div>
+    </div>
+  </body>
+</html>

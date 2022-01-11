@@ -1,0 +1,107 @@
+<!--
+  ~ Copyright (C) 2022 HERE Europe B.V.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  ~ SPDX-License-Identifier: Apache-2.0
+  ~ License-Filename: LICENSE
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@here" />
+    <meta name="twitter:title" content="Clustering with HERE Interactive Map Layers" />
+    <meta name="twitter:description" content="Visualize the density of UK supermarkets with HERE Interactive Map Layers." />
+    <meta name="twitter:image" content="https://heremaps.github.io/here-interactive-map-layer-examples/clustering/opengraph.png" />
+    <meta property="og:url" content="https://heremaps.github.io/here-interactive-map-layer-examples/clustering/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Clustering with HERE Interactive Map Layers" />
+    <meta property="og:description" content="Visualize the density of UK supermarkets with HERE Interactive Map Layers." />
+    <meta property="og:image" content="https://heremaps.github.io/here-interactive-map-layer-examples/clustering/opengraph.png" />
+    
+    <title>Clustering with HERE Interactive Map Layers</title>
+    
+    <link rel="stylesheet" href="index.css" />
+    <script type="module" src="index.js"></script>
+  </head>
+  <body>
+    <div id="map" class="map"></div>
+    <div id="info">
+      <h3>UK Supermarkets</h3>
+      <div id="retails">
+        Select supermarket retail chain:
+        <br />
+        <div class="retail"><input id="All" type="radio" name="retail" checked value="All"/><label for="All">All</label></div>
+        <div class="retail"><input id="Tesco" type="radio" name="retail" value="Tesco"/><label for="Tesco">Tesco</label></div>
+        <div class="retail"><input id="Cooperative" type="radio" name="retail"  value="The Co-operative Group"/><label for="Cooperative">The Cooperative</label></div>
+        <div class="retail"><input id="Spar" type="radio" name="retail" value="Spar"/><label for="Spar">Spar</label></div>
+        <div class="retail"><input id="Sainsburys" type="radio" name="retail" value="Sainsburys"/><label for="Sainsburys">Sainsbury's</label></div>
+        <div class="retail"><input id="Iceland" type="radio" name="retail" value="Iceland"/><label for="Iceland">Iceland</label></div>
+     </div>
+
+     <div id="retails-layer">
+      <table>
+        <tr>
+          <td style="width:72%">Show individual supermarkets</td>
+          <td style="width:28%">
+            <div id="retail-switch">
+              <div class="retail-btn-group">
+                <button class='active' value='off'>OFF</button>
+                <button value='on'>ON</button>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+
+     <div id="quantiles" >
+      <p>Number of cells by supermarket density:</p>
+      <table>
+      </table>
+     </div>
+    </div>
+
+    <div id="clustering-switch">
+      <div class="btn-group">
+        <button class='active' value='hexbin'>Hexbin</button>
+        <button value='quadbin'>Quadbin</button>
+      </div>
+    </div>
+    <div id="slider">
+      <div id="range"><span>Relative clustering resolution: 0</span><input type="range" min="-2" max="2" value="0"></div>
+      
+      <div id="scale"><span>-2</span><span class="space1"></span><span>-1</span><span class="space2"></span><span>0</span><span class="space2"></span><span>1</span><span class="space3"></span><span>2</span></div>
+
+    </div>
+    
+    <div id="info2">
+
+      <div id="intro">
+        <h3>Clustering with HERE Interactive Map Layers</h3>
+        <p>Interactive Map Layers offer the capability to retrieve statistical information for the data stored in the layer. This could include information about the values of a property or simply the count of features in the cluster. Interactive Map Layer supports hexagonal and square grid clustering.</p>
+        <p>The example shows how Interactive Map Layer is used to demonstrate the density of supermarket coverage in the UK. The supermarket retail points are stored in an Interactive Map Layer. The layer is then queried to retrieve the individual points, the density of all supermarkets, and the density of each supermarket chain.</p>
+        <p>To represent the density, the supermarket data is requested as hexagonal and square grid clusters from the Interactive Map Layer. The returned features represent the cluster cells and include the count of the features inside. The map client displays the cells in a color that represents the density of the supermarkets in it. Brighter cells indicate a bigger number of supermarkets and respectively higher density.</p>
+      </div>
+      <div id="source">
+         <p>This example uses: Interactive API,  <a href="https://openlayers.org/" target="_new">OpenLayers</a></p>
+         <p>Data source: <a href="https://geolytix.com/blog/tag/open-data/" target="_new">GEOLYTIX</a></p>
+         <p>Source code: <a href="https://github.com/heremaps/here-interactive-map-layer-examples/tree/main/examples/clustering">GitHub</a></p>
+      </div> 
+   </div>
+  </body>
+</html>
