@@ -30,6 +30,6 @@ fileObjs.forEach(file => {
 
 fs.writeFileSync('dist/README.md',
     fs.readFileSync('./README.md', 'utf8')
-    .replaceAll('https://heremaps.github.io/here-interactive-map-layer-examples/', '')
-    .replaceAll('[Source Code](examples/', '[Source Code](https://github.com/heremaps/here-interactive-map-layer-examples/examples/')
+    .replace(/https:\/\/heremaps.github.io\/here-interactive-map-layer-examples\//g, '')
+    .replace(/\[Source Code\]\(examples\//g, '[Source Code](https://github.com/heremaps/here-interactive-map-layer-examples/examples/')
 );
