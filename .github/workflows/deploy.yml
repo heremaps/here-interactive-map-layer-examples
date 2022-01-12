@@ -23,7 +23,7 @@ jobs:
         run: yarn install
 
       - name: Set HERE Platform API Key
-        run: yarn set-api-key ${{ secrets.API_KEY }}
+        run: yarn set-api-key ${{ secrets.HERE_API_KEY }}
 
       - name: Build examples
         run: yarn build
