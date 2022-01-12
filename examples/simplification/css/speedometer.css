@@ -47,18 +47,17 @@
   position: absolute; 
   font-size: 14px; 
   text-align: left; 
-  font-weight: bold; 
-  left: 35px;
+  left: 30px;
   top: 128px;
 }
 .info3 {
   position: absolute; 
   font-size: 14px; 
   text-align: left; 
-  font-weight: bold; 
   top: 150px;
   left: -10px;
   width: 200px;
+  white-space: nowrap;
 }
 .info4 {
   position: absolute; 

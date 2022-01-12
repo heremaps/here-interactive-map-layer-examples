@@ -160,8 +160,8 @@ function main(lat, lon, zoom) {
         const position = -22.5 + ((11-effectivez)/10) * 225;
         indicator.style.transform = "rotate(" + position + "deg)";
         info1.innerHTML = Math.floor((pointnumbers[pn][crtzl]/pointnumbers[pn][10])*100) + "%";
-        info2.innerHTML = "Zoomlevel: " + Math.floor(Math.max(1, zoomlevel)*10)/10;
-        info3.innerHTML = "Geometry size: " + pointnumbers[pn][crtzl] + " of " + pointnumbers[pn][10];
+        info2.innerHTML = "Zoom level: <b>" + Math.floor(Math.max(1, zoomlevel)*10)/10 + "</b>";
+        info3.innerHTML = "Geometry size: <b>" + pointnumbers[pn][crtzl] + "</b> of <b>" + pointnumbers[pn][10] + "</b>";
     }
 
     setScaleValue(4);
