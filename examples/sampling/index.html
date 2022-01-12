@@ -45,7 +45,7 @@
       <h3>Trees in maintenance of City of Amsterdam</h3>
 
       <div id="overlay-trees">
-        <p>Select tree species to visualize:</p>
+        <div class="descp"><span>Select tree species to visualize:</span><span class="infoicon" value="1">&#9432;</span></div>
         <div id="trees">
            <div class="line-parent"><div class="line" style="background: #c8ffb6;"></div><input id="All" type="radio" name="tree" checked value="All" /><label class="treelabel" for="All">All</label><label>- 259,431</label></div>
            <div class="line-parent"><div class="line" style="background: #9acd32;"></div><input id="Elm" type="radio" name="tree" value="Ulmus" /><label class="treelabel" for="Elm">Elm</label><label>- 31,327</label></div>
@@ -62,21 +62,24 @@
      </div>
     </div>
 
-    <div id="info">
-      <div id="intro">
-        <h3>Interactive Map Layers: Data Sampling</h3>
-        <p>One of the features offered by Interactive Map Layers is data sampling. Data sampling makes possible to efficiently render an excerpt of a very large data set for visual reference and analysis, without the need to transfer all the data to the client.</p>
-        <p>This example includes a cadastral map to explore the trees in maintenance of the city of Amsterdam. Each of the <b>259,431</b> trees is stored as an individual map feature.</p>
-        <p>By including the parameter <i>mode=viz</i> the Interactive API is instructed to return the data optimized for visualization. On map zoom levels, where there are too many features, the tiles returned by Interactive API include only a sample with a geographically accurate representation of the data.</p>
-      </div>
-      <div id="source">
-        <p>This example uses: Interactive API, <a href="https://developer.here.com/develop/javascript-api">HERE Maps API for Javascript</a></p>
-        <p>Data source: <a href="https://maps.amsterdam.nl/">City of Amsterdam</a></p>
-        <p>Source code: <a href="https://github.com/heremaps/here-interactive-map-layer-examples/blob/main/examples/sampling">GitHub</a></p>
+    <div id="info" class="collapsed">
+      <span class="resizeicon expand"></span><span id="resizetext">Click to expand</span>
+      <div id="content" class="hidden">
+        <div id="intro">
+          <h3>Interactive Map Layers: Data Sampling</h3>
+          <p>One of the features offered by Interactive Map Layers is data sampling. Data sampling makes possible to efficiently render an excerpt of a very large data set for visual reference and analysis, without the need to transfer all the data to the client.</p>
+          <p>This example includes a cadastral map to explore the trees in maintenance of the city of Amsterdam. Each of the <b>259,431</b> trees is stored as an individual map feature.</p>
+          <p>By including the parameter <i>mode=viz</i> the Interactive API is instructed to return the data optimized for visualization. On map zoom levels, where there are too many features, the tiles returned by Interactive API include only a sample with a geographically accurate representation of the data.</p>
+        </div>
+        <div id="source">
+          <p>This example uses: Interactive API, <a href="https://developer.here.com/develop/javascript-api">HERE Maps API for Javascript</a></p>
+          <p>Data source: <a href="https://maps.amsterdam.nl/">City of Amsterdam</a></p>
+          <p>Source code: <a href="https://github.com/heremaps/here-interactive-map-layer-examples/blob/main/examples/sampling">GitHub</a></p>
+        </div> 
       </div> 
     </div>
     <div id="switch">
-      Sampling strength:
+      <div class="descp"><span>Sampling strength:</span><span class="infoicon" value="2">&#9432;</span></div>
       <div class="btn-group">
         <button value='low'>Low</button>
         <button value='med'>Med</button>

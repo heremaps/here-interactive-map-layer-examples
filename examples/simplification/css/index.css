@@ -33,7 +33,7 @@
      color: #6d6178;
  }
 
- .page-header, #info{
+ .page-header{
      position: absolute;
      z-index: 1000;
      width: 300px;
@@ -44,7 +44,22 @@
  }
 
  #info {
-    right: 5px;
+     position: absolute;
+     z-index: 1000;
+     background: white;
+     color: #6d6178;
+     margin: 15px;
+     padding: 16px;
+     right: 5px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+ 
+ .expanded{
+     width: 500px;
+ }
+ .collapsed{
+     cursor: pointer;
+     width: 180px;
  }
 
  #scale #index {
@@ -99,6 +114,19 @@
     display: none;
 }
   
+#firstpart .descp, #retails-layer .descp, #quantiles .descp{
+  padding: 0 0 0 5px;
+}
+
+#secondpart p{
+  margin-top: 0px;
+}
+
+.infoicon{
+  cursor: pointer;
+  float: right
+}
+
 .expand-more, .expand-less {
     background-image: url("icons/expand_more.png");
     background-size: contain;
@@ -111,6 +139,27 @@
     background-image: url("icons/expand_less.png");
 }
 
+.resizeicon{
+  position: absolute;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  top: 5px;
+}
+
+#resizetext{
+  position: absolute;
+  left: 60px;
+  top: 8px;
+}
+
+.expand{
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAAEWAAABFgGExyN2AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAADZQTFRF////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARy+jrgAAABF0Uk5TAAQFBhUkLausra6vsLG90uo1ntoSAAAAa0lEQVQoz73JOxaAIBDF0IAj/oW3/81a6BwFrU15A7/Ud610PUAqW6w9biVBKtJanbhKJbFL0vI4cZGkHcv1OT0b15mvE2d3P1MACNPtz1O7nzGEsXY/w9C6n7ffp3U/bz/Pl4Plbwcz/u0APXwITYhubTcAAAAASUVORK5CYII=');
+}
+
+.collapse{
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABFgAAARYBhMcjdgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADBSURBVEiJ5dXBCYMwFIDh/xV1g2zg1clrqw7gEo7hEq+HJhAC6ktKQGggB2P8/oMRRVWpOR5V9f8LiIgTEVcl4OEVWLMiqno5AQdsgPq5Ac70bAGeFSnFzZFfcFMkF3/6aY7k4CPQ+DlaI1b8BTTRvsavXUay8dzIFf4G2pOD0Po9h5EzfDrDk8h0FIHv51+EGyIrwADs0eKcgyeROXJ2YAg3Q2QpwZPIEvD0FPVAV4pHTgf04VrCm6417vVHu2XgA7IgcnnLUJTbAAAAAElFTkSuQmCC');
+}
 
 .shepherd-element {
     background: none;
@@ -128,10 +177,10 @@
       margin-left: 0px;
       margin-bottom: 13px;
   }
-.first-step {
-    background: white;
-    max-width: 800px;
-}
+  .first-step {
+      background: white;
+      max-width: 800px;
+  }
   .first-step .shepherd-content{
     background: rgba(255, 255, 255, 0);
   }

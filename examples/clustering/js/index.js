@@ -264,8 +264,6 @@ function getQuantilesTable(quantiles, step) {
   return qt.join('');
 }
 
-
-
 const resInput = document.querySelector("#range input");
 const resSpan = document.querySelector("#range span");
 resInput.addEventListener("pointerup", function(e){
@@ -323,5 +321,33 @@ retailLayerSwitch.forEach(button => {
     retailLayer = tempRetailLayer;
   })
 })
+
+
+const info = document.querySelector("#info2");
+const infoResize = document.querySelector(".resizeicon");
+const resizeText = document.querySelector("#resizetext");
+const infoContent = document.querySelector("#content");
+
+function resizeOnClick(e){
+  e.stopPropagation();
+  if(info.classList.contains("collapsed")){
+    info.classList.remove("collapsed");
+    info.classList.add("expanded");
+    infoResize.classList.remove("expand");
+    infoResize.classList.add("collapse");
+  } else {
+    if(this.id == "info2") return;
+    info.classList.remove("expanded");
+    info.classList.add("collapsed");
+    infoResize.classList.remove("collapse");
+    infoResize.classList.add("expand");
+  }
+  resizeText.classList.toggle("hidden");
+  infoContent.classList.toggle("hidden");
+  
+}
+info.addEventListener("pointerup", resizeOnClick);
+infoResize.addEventListener("pointerup", resizeOnClick);
+
 
 tour();

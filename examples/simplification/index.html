@@ -45,15 +45,18 @@
     <div class="page-header">
       <h3>Routes</h3>
       <div id="firstpart">
-        <p>Select a route:</p>
+        <div class="descp"><span>Select a route:</span><span class="infoicon" value="1">&#9432;</span></div>
         <div id="buttons">
           <div id="routa" class="button" value="a">Houston -> Washington D.C.</div>
           <div id="routb" class="button" value="b">Paris -> Moscow</div>
         </div>
       </div>
       <div id="secondpart">
-        <p id="a">Interactive Map Layer reduces the geometry size of the route from Houston to Washington D.C. from <b>22408</b> to <b>1426</b> at zoomlevel <b>1</b> </p>
-        <p id="b" class="hidden">Interactive Map Layer reduces the geometry size of the route from Paris to Moscow from <b>31600</b> to <b>2336</b> at zoomlevel <b>1</b></p>
+        <br/>
+        <div class="descp"><span>Interactive Map Layer reduces the</span><span class="infoicon" value="2">&#9432;</span></div>
+
+        <p id="a">geometry size of the route from Houston to Washington D.C. from <b>22408</b> to <b>1426</b> at zoomlevel <b>1</b> </p>
+        <p id="b" class="hidden">geometry size of the route from Paris to Moscow from <b>31600</b> to <b>2336</b> at zoomlevel <b>1</b></p>
       
         <div id="scale">
           <div id="gradulation">
@@ -111,16 +114,19 @@
 
     <div id="anchorpoint"></div>
 
-    <div id="info">
-      <div id="intro">
-        <h3>Geometry simplification with Interactive Map Layers</h3>
-        <p>Map features stored in Interactive Map Layers can be retrieved as tiles. Interactive Map Layers offers the ability to simplify the geometry of the features in the tiles by simply including the parameter <i>mode=viz</i>. This can be useful for reducing the amount of data that needs to be transferred to the client and helps the client to render the data faster.</p>
-        <p>In this example two very long routes, containing <b>31,600</b> and <b>22,408</b> coordinates respectively, were created using the HERE Routing API. The tiles returned by Interactive API, contain a simplified version of the route geometry optimized for the zoom level of the map. There is no visual difference between the original and the simplified geometry at the requested zoom level. However, the simplified geometry contains a significantly reduced number of coordinates.</p>
-      </div>
-      <div id="source">
-         <p>This example uses: Interactive API, Leaflet, Tangram</p>
-         <p>Data source: Routes calculated by <a href="https://developer.here.com/documentation/routing-api/dev_guide/index.html" target="_new">HERE Routing API</a></p>
-         <p>Source code: <a href="https://github.com/heremaps/here-interactive-map-layer-examples/blob/main/simplification">GitHub</a></p>
+    <div id="info" class="collapsed">
+      <span class="resizeicon expand"></span><span id="resizetext">Click to expand</span>
+      <div id="content" class="hidden">
+        <div id="intro">
+          <h3>Geometry simplification with Interactive Map Layers</h3>
+          <p>Map features stored in Interactive Map Layers can be retrieved as tiles. Interactive Map Layers offers the ability to simplify the geometry of the features in the tiles by simply including the parameter <i>mode=viz</i>. This can be useful for reducing the amount of data that needs to be transferred to the client and helps the client to render the data faster.</p>
+          <p>In this example two very long routes, containing <b>31,600</b> and <b>22,408</b> coordinates respectively, were created using the HERE Routing API. The tiles returned by Interactive API, contain a simplified version of the route geometry optimized for the zoom level of the map. There is no visual difference between the original and the simplified geometry at the requested zoom level. However, the simplified geometry contains a significantly reduced number of coordinates.</p>
+        </div>
+        <div id="source">
+          <p>This example uses: Interactive API, Leaflet, Tangram</p>
+          <p>Data source: Routes calculated by <a href="https://developer.here.com/documentation/routing-api/dev_guide/index.html" target="_new">HERE Routing API</a></p>
+          <p>Source code: <a href="https://github.com/heremaps/here-interactive-map-layer-examples/blob/main/simplification">GitHub</a></p>
+        </div> 
       </div> 
     </div>
 

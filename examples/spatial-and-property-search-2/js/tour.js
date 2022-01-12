@@ -43,6 +43,15 @@ function tour() {
         exitOnEsc: true,
         classes: 'shepherd-theme-custom'
     });
+    
+    const infoIcons = document.querySelectorAll(".infoicon");
+    infoIcons.forEach(function(e){
+      e.addEventListener('pointerup', function(i){
+        const value = this.getAttribute("value");
+        tour.start();
+        tour.show(value*1, true)
+      })
+    })
 
     tour.addStep({
         title: "<h3>HERE Interactive Map Layer: Spatial and Property Search</h3>",

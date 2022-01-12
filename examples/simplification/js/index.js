@@ -33,8 +33,8 @@ function main(lat, lon, zoom) {
     });
 
     window.mapmvt = L.map('mapmvt', {
-        center: [34.3938295, -80.4363281],
-        zoom: 4,
+        center: [53.505146, 18.8472487],
+        zoom: 6,
         layers: [tangrammvt],
         zoomControl: false,
         maxZoom: 18
@@ -169,5 +169,30 @@ function main(lat, lon, zoom) {
     tour(mapmvt);
 }
 
+const info = document.querySelector("#info");
+const infoResize = document.querySelector(".resizeicon");
+const resizeText = document.querySelector("#resizetext");
+const infoContent = document.querySelector("#content");
 
-main(34.3938295, -80.4363281, 4);
+function resizeOnClick(e){
+  e.stopPropagation();
+  if(info.classList.contains("collapsed")){
+    info.classList.remove("collapsed");
+    info.classList.add("expanded");
+    infoResize.classList.remove("expand");
+    infoResize.classList.add("collapse");
+  } else {
+    if(this.id == "info") return;
+    info.classList.remove("expanded");
+    info.classList.add("collapsed");
+    infoResize.classList.remove("collapse");
+    infoResize.classList.add("expand");
+  }
+  resizeText.classList.toggle("hidden");
+  infoContent.classList.toggle("hidden");
+  
+}
+info.addEventListener("pointerup", resizeOnClick);
+infoResize.addEventListener("pointerup", resizeOnClick);
+
+main(53.505146, 18.8472487, 4);

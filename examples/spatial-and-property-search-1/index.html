@@ -43,7 +43,8 @@
     <div id="overlay">
       <h3>Sport facilities</h3>
       <div id="overlay-sport">
-         <p>Explore administrative areas of Amsterdam which provides sport facilities.</p>
+         <div class="descp"><span>Explore administrative areas of</span><span class="infoicon" value="2">&#9432;</span></div>
+         <p> Amsterdam which provides sport facilities.</p>
          <div id="sports">
             <div class="line-parent"><div class="line" style="background: #55b6fc;"></div><input id="Skate" type="radio" name="sport" checked value="Skate"/><label for="Skate">Skate</label></div>
             <div class="line-parent"><div class="line" style="background: #fc8c54;"></div><input id="Tennis" type="radio" name="sport" value="Tennis"/><label for="Tennis">Tennis</label></div>
@@ -57,14 +58,16 @@
          </div>
       </div>
       <div id="overlay-areas">
-         <p>Administrative area level:</p>
+         <div class="descp"><span>Administrative area level:</span><span class="infoicon" value="3">&#9432;</span></div>
          <div id="ad-level" class="line-parent"><div class="line areas" style="background: #BFBFBF;"></div><input id="Neighbourhoods" type="radio" name="areas" checked value="neighbourhoods"/><label for="Neighbourhoods">Neighbourhoods</label></div>
          <div class="line-parent"><div class="line areas" style="background: #AFAFAF;"></div><input id="Quarters" type="radio" name="areas" value="quarters"/><label for="Quarters">Quarters</label></div>
          <div class="line-parent"><div class="line areas" style="background: #9F9F9F;"></div><input id="Areas" type="radio" name="areas" value="areas"/><label for="Areas">Areas</label></div>
          <div class="line-parent"><div class="line areas" style="background: #8F8F8F;"></div><input id="Districts" type="radio" name="areas" value="city-districts"/><label for="Districts">City districts</label></div>
       </div>
     </div>
-    <div id="info">
+    <div id="info" class="collapsed">
+      <span class="resizeicon expand"></span><span id="resizetext">Click to expand</span>
+      <div id="content" class="hidden">
        <div id="intro">
 
          <h3>HERE Interactive Map Layer: Spatial and Property Search</h3>
@@ -79,7 +82,8 @@
           <p>Data source: <a href="https://maps.amsterdam.nl/">City of Amsterdam</a></p>
           <p>Source code: <a href="https://github.com/heremaps/here-interactive-map-layer-examples/blob/main/examples/spatial-and-property-search-1">GitHub</a></p>
        </div> 
+      </div> 
     </div>
-    <div id="request-info"><div id="requests"></div></div>
+    <div id="request-info"><div id="requests"></div><span class="infoicon" value="1">&#9432;</span></div>
  </body>
 </html>

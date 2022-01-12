@@ -318,6 +318,32 @@ function expandSection(element, className, height, latestBlock, value) {
   }
 }
 
+const info = document.querySelector("#info");
+const infoResize = document.querySelector(".resizeicon");
+const resizeText = document.querySelector("#resizetext");
+const infoContent = document.querySelector("#content");
+
+function resizeOnClick(e){
+  e.stopPropagation();
+  if(info.classList.contains("collapsed")){
+    info.classList.remove("collapsed");
+    info.classList.add("expanded");
+    infoResize.classList.remove("expand");
+    infoResize.classList.add("collapse");
+  } else {
+    if(this.id == "info") return;
+    info.classList.remove("expanded");
+    info.classList.add("collapsed");
+    infoResize.classList.remove("collapse");
+    infoResize.classList.add("expand");
+  }
+  resizeText.classList.toggle("hidden");
+  infoContent.classList.toggle("hidden");
+  
+}
+info.addEventListener("pointerup", resizeOnClick);
+infoResize.addEventListener("pointerup", resizeOnClick);
+
 main(0, 0, 2);
 
 

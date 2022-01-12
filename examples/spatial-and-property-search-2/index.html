@@ -41,7 +41,8 @@
     <div id="overlay">
       <h3>Sport facilities</h3>
       <div id="overlay-sport">
-         <p>Explore sport facilities in Amsterdam that is reachable with each public transport line.</p>
+         <div class="descp"><span>Explore sport facilities in Amsterdam</span><span class="infoicon" value="2">&#9432;</span></div>
+         <p> that is reachable with each public transport line.</p>
          <div id="sports">
             <div class="line-parent"><div class="line" style="background: #55b6fc;"></div><input id="Skate" type="radio" name="sport" checked value="Skate"/><label for="Skate">Skate</label></div>
             <div class="line-parent"><div class="line" style="background: #fc8c54;"></div><input id="Tennis" type="radio" name="sport" value="Tennis"/><label for="Tennis">Tennis</label></div>
@@ -59,7 +60,7 @@
          <svg width="45" height="14">
             <line x1="0" y1="9.5" x2="42" y2="9.5" style="stroke:#FF0000;stroke-width:2" shape-rendering="crispEdges"></line>
          </svg>
-         <b>Tram</b>: <span>--</span>
+         <b>Tram</b>: <span>--</span><span class="infoicon" value="3">&#9432;</span>
          <div>
             <select name="trams" id="trams" multiple>
             <option value="1">Line 1</option>
@@ -84,7 +85,7 @@
          <svg width="45" height="14">
             <line x1="0" y1="9.5" x2="42" y2="9.5" style="stroke:#0051FF;stroke-width:4" shape-rendering="crispEdges"></line>
          </svg>
-         <b>Metro</b>: <span>--</span>
+         <b>Metro</b>: <span>--</span><span class="infoicon" value="4">&#9432;</span>
          <div>
             <select name="metro" id="metro" multiple>
             <option value="50">Line 50</option>
@@ -98,12 +99,14 @@
 
       <br/>
       <div id="overlay-radius">
-         <div id="range"><span>Search for <b>Skate</b> along Tram or Metro <b>lines</b> with radius of </span><span><b>500</b> meters.</span><input type="range" min="200" max="1000" value="500"></div>
+         <div id="range"><span>Search for <b>Skate</b> along Tram</span><span class="infoicon" value="5">&#9432;</span><span> or Metro <b>lines</b> with radius of </span><span><b>500</b> meters.</span><input type="range" min="200" max="1000" value="500"></div>
          
       </div>
     </div>
 
-    <div id="info">
+    <div id="info" class="collapsed">
+      <span class="resizeicon expand"></span><span id="resizetext">Click to expand</span>
+      <div id="content" class="hidden">
        <div id="intro">
          <h3>HERE Interactive Map Layer: Spatial and Property Search</h3>
 
@@ -117,8 +120,9 @@
           <p>Data source: <a href="https://maps.amsterdam.nl/">City of Amsterdam</a></p>
           <p>Source code: <a href="https://github.com/heremaps/here-interactive-map-layer-examples/blob/main/examples/spatial-and-property-search-2">GitHub</a></p>
        </div> 
+      </div>
     </div>
-    <div id="request-info"><div id="requests"></div></div>
+    <div id="request-info"><div id="requests"></div><span class="infoicon" value="1">&#9432;</span></div>
     <div id="ancher-point1"></div>
     <div id="ancher-point2"></div>
  </body>

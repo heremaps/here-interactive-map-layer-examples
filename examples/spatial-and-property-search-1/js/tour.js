@@ -31,6 +31,15 @@ function tour() {
         classes: 'shepherd-theme-custom'
     });
 
+    const infoIcons = document.querySelectorAll(".infoicon");
+    infoIcons.forEach(function(e){
+      e.addEventListener('pointerup', function(i){
+        const value = this.getAttribute("value");
+        tour.start();
+        tour.show(value*1, true)
+      })
+    });
+
     tour.addStep({
       title: " <h3>HERE Interactive Map Layer: Spatial and Property Search</h3>",
       text: "<p>Features stored in Interactive Map Layers can be retrieved by spatial and/or property search queries. The spatial search query could be used to retrieve features that intersect a given point, line or area. This is provided to the API as a GeoJSON geometry. Additionally, a radius parameter defined in meters could be specified.</p>"

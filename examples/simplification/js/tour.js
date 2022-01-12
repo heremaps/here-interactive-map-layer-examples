@@ -30,6 +30,15 @@ function tour(map) {
         exitOnEsc: true,
         classes: 'shepherd-theme-custom'
     });
+    
+    const infoIcons = document.querySelectorAll(".infoicon");
+    infoIcons.forEach(function(e){
+      e.addEventListener('pointerup', function(i){
+        const value = this.getAttribute("value");
+        tour.start();
+        tour.show(value*1, true)
+      })
+    })
 
     tour.addStep({
       title: "<h3>Geometry simplification with Interactive Map Layers</h3>",
@@ -112,7 +121,7 @@ function tour(map) {
         },
         {
           action() {
-            map.flyTo({lat: 30.305305123909204, lng: -89.73973651198324}, 16, {
+            map.flyTo({lat: 50.92473637543149, lng: 6.845631054311526}, 16, {
               animate: true,
               duration: 1 // in seconds
             })
@@ -136,7 +145,7 @@ function tour(map) {
       buttons: [
         {
           action() {
-            map.flyTo({lat:34.3938295, lon: -80.4363281}, 4, {
+            map.flyTo({lat:53.505146, lon: 18.8472487}, 4, {
               animate: true,
               duration: 1 // in seconds
             });
@@ -146,7 +155,7 @@ function tour(map) {
         },
         {
           action() {
-            map.flyTo({lat:34.3938295, lon: -80.4363281}, 4, {
+            map.flyTo({lat:53.505146, lon: 18.8472487}, 4, {
               animate: true,
               duration: 1 // in seconds
             });

@@ -31,7 +31,14 @@ function tour() {
         classes: 'shepherd-theme-custom'
     });
 
-    window.tour = tour;
+    const infoIcons = document.querySelectorAll(".infoicon");
+    infoIcons.forEach(function(e){
+      e.addEventListener('pointerup', function(i){
+        const value = this.getAttribute("value");
+        tour.start();
+        tour.show(value*1, true)
+      })
+    })
 
     tour.addStep({
         title: "<h3>Clustering with HERE Interactive Map Layers</h3>",
