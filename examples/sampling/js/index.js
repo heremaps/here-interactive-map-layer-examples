@@ -83,20 +83,20 @@ window.map = new H.Map(
     document.getElementById('map'),
     defaultLayers.vector.normal.map,
     {
-        center: new H.geo.Point(52.376839, 4.90864377),
-        zoom: 13
+        center: new H.geo.Point(52.36745, 4.90399),
+        zoom: 12
     }
 );
 const behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
 
 var species = "All";
-var sampling = "high";
+var sampling = "med";
 var color = "rgba(200, 254, 182, 0.1)";
 var colorM = "rgba(200, 254, 182, 0.3)";
 var colorH = "rgba(200, 254, 182, 0.6)";
 var imlLayer = addIml(map, platform, {parameters: {
     mode: "viz",
-    vizSampling: "high"
+    vizSampling: sampling
 }}, color, colorM, colorH);
 map.addLayer(imlLayer);
 
