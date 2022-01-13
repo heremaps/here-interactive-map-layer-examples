@@ -1,4 +1,4 @@
-# HERE Interactive Map Layer: Spatial and Property Search Example 2
+# HERE ctive Map Layer: Spatial and Property Search Example 2
 
 Features stored in Interactive Map Layers can be retrieved by spatial and/or property search queries. The spatial search query could be used to retrieve features that intersect a given point, line or area. This can be provided to the API as a GeoJSON geometry. Additionally, a radius parameter defined in meters could be specified.
 
@@ -24,7 +24,7 @@ __[Live example](https://heremaps.github.io/here-interactive-map-layer-examples/
 
 ### Set your API key
 
-Set your [HERE Platform API Key](https://developer.here.com/documentation/identity-access-management/dev_guide/topics/plat-using-apikeys.html).
+Set your [HERE platform API Key](https://developer.here.com/documentation/identity-access-management/dev_guide/topics/plat-using-apikeys.html).
 
     yarn set-api-key <YOUR_API_KEY>
 

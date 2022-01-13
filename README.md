@@ -1,6 +1,6 @@
 # HERE Interactive Map Layer Examples
 
-This repository contains examples for Interactive Map Layers - one of the [supported data layer types](https://developer.here.com/documentation/data-user-guide/user_guide/portal/layers/layers.html) on [HERE Platform](https://www.here.com/platform). Interactive Map Layers offer a set of unique capabilities, enabling you to store, retrieve, search for, analyze and modify data at a feature (e.g., a place) and feature property (e.g., the name of the place) level.
+This repository contains examples for Interactive Map Layers - one of the [supported data layer types](https://developer.here.com/documentation/data-user-guide/user_guide/portal/layers/layers.html) on [HERE platform](https://www.here.com/platform). Interactive Map Layers offer a set of unique capabilities, enabling you to store, retrieve, search for, analyze and modify data at a feature (e.g., a place) and feature property (e.g., the name of the place) level.
 
 The API behind Interactive Map Layers is the [Interactive API](https://developer.here.com/documentation/data-api/api-reference-interactive.html).
 
@@ -21,7 +21,7 @@ In this example two very long routes were created using [HERE Routing API](https
 
 __[Source Code](examples/sampling) - [Live Map](https://heremaps.github.io/here-interactive-map-layer-examples/examples/sampling/index.html)__
 
-One of the features offered by Interactive Map Layers is data sampling. Data sampling makes possible to efficiently render an excerpt of a very large data set for visual reference and analysis, without the need to transfer all the data to the client.
+One of the features offered by Interactive Map Layers is data sampling. Data sampling enables clients to efficiently render an excerpt of a very large data set for visual reference and analysis, without the need to retrieve all the data.
 
 This example includes a cadastral map to explore the trees in maintenance of the city of Amsterdam, stored as individual map features. On map zoom levels, where there are too many features, the tiles returned by Interactive API include only a sample with a geographically accurate representation of the data.
  
@@ -76,7 +76,7 @@ In order to be able to use the [HERE Maps API for Javascript](https://developer.
 
 ### Set your API key
 
-Set your [HERE Platform API Key](https://developer.here.com/documentation/identity-access-management/dev_guide/topics/plat-using-apikeys.html).
+Set your [HERE platform API Key](https://developer.here.com/documentation/identity-access-management/dev_guide/topics/plat-using-apikeys.html).
 
     yarn set-api-key <YOUR_API_KEY>
 

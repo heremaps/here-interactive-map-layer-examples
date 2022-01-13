@@ -22,7 +22,7 @@ __[Live example](https://heremaps.github.io/here-interactive-map-layer-examples/
 
 ### Set your API key
 
-Set your [HERE Platform API Key](https://developer.here.com/documentation/identity-access-management/dev_guide/topics/plat-using-apikeys.html).
+Set your [HERE platform API Key](https://developer.here.com/documentation/identity-access-management/dev_guide/topics/plat-using-apikeys.html).
 
     yarn set-api-key <YOUR_API_KEY>
 
