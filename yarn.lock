@@ -33,25 +33,25 @@
   resolved "https://repo.platform.here.com/artifactory/api/npm/maps-api-for-javascript/-/@here/maps-api-for-javascript-1.30.6.tgz#65b9189e6ae9dbf1484e5a135be3e3bee8bd6785"
   integrity sha1-ZbkYnmrp2/FITloTW+Pjvui9Z4U=
 
-"@here/xyz-maps-common@^0.26.0":
-  version "0.26.0"
-  resolved "https://registry.npmjs.org/@here/xyz-maps-common/-/xyz-maps-common-0.26.0.tgz#d0dc7c07663ceadb22d83a69eff9d229224be269"
-  integrity sha512-IxOn7df/BDr05E8wdEN1YR4sjGPUkMDbOl4WHkMbmJPams8YYV2Q1iGT/9+rOAGEumEuGXLJw5jzs5FsyjBKPw==
+"@here/xyz-maps-common@^0.27.0":
+  version "0.27.0"
+  resolved "https://registry.yarnpkg.com/@here/xyz-maps-common/-/xyz-maps-common-0.27.0.tgz#e18139bfb753fb6eec2eecea6e12316038b9bbb8"
+  integrity sha512-dKOq7ih06GCidlOgtWH/Q6NzU8btVV7AHwIzGMmmsZN++ES6FMzifYKq6lvB0VU3M20BaHH+VocazKckN9w49g==
 
-"@here/xyz-maps-core@^0.26.0":
-  version "0.26.0"
-  resolved "https://registry.npmjs.org/@here/xyz-maps-core/-/xyz-maps-core-0.26.0.tgz#2522cc9afe1d8cdd65d0c95cf025d30ac6e5bfe2"
-  integrity sha512-MMeo8JJCXezxslKnONl2oOKPZgdVL/VUAfDmOp5y8oEDD4Sp5z+B+XxVTTm45jubqvtyVhpMeHyxBSQ6efmqrQ==
+"@here/xyz-maps-core@^0.27.0":
+  version "0.27.0"
+  resolved "https://registry.yarnpkg.com/@here/xyz-maps-core/-/xyz-maps-core-0.27.0.tgz#22e748db90f9d25411dc2dcd8a292397abd8d74f"
+  integrity sha512-8+Ha1RqHgGk9QUFN8sBii+Kdg79l4aLBBtcSaCJ6fyrz7cZEVZnpo1t48Vql/eW/EsEshSDRKL4GRlK3Ef/g5w==
   dependencies:
-    "@here/xyz-maps-common" "^0.26.0"
+    "@here/xyz-maps-common" "^0.27.0"
 
-"@here/xyz-maps-display@^0.26.0":
-  version "0.26.0"
-  resolved "https://registry.npmjs.org/@here/xyz-maps-display/-/xyz-maps-display-0.26.0.tgz#d9b51bef7557208adc088ff559c8acb8865b066c"
-  integrity sha512-kawQ20No6KVqgWjs1DpNLjcketj5ux1AkWNsd+CQchgEwteGp0qGnHku5Ov/zVp/bbWhHfFz667kH66l/czWwA==
+"@here/xyz-maps-display@^0.27.0":
+  version "0.27.0"
+  resolved "https://registry.yarnpkg.com/@here/xyz-maps-display/-/xyz-maps-display-0.27.0.tgz#ac75d94f1b7f58980df5be4e4cf3425f24e5fa86"
+  integrity sha512-Fbtsphn6egD91D9vwZ+jzBXD2PE1XRSV9vUCbbtGRvrDHfrKxi+i3XZZbZ/6cbcZUxnh7GJcGphn50zBqmfjxA==
   dependencies:
-    "@here/xyz-maps-common" "^0.26.0"
-    "@here/xyz-maps-core" "^0.26.0"
+    "@here/xyz-maps-common" "^0.27.0"
+    "@here/xyz-maps-core" "^0.27.0"
 
 "@hutson/parse-repository-url@^3.0.0":
   version "3.0.2"
@@ -4650,10 +4650,10 @@ mapbox-to-css-font@^2.4.0:
   resolved "https://registry.npmjs.org/mapbox-to-css-font/-/mapbox-to-css-font-2.4.0.tgz#a23b51664a1ee839beaefade013f2655bee9a390"
   integrity sha512-v674D0WtpxCXlA6E+sBlG1QJWdUkz/s9qAD91bJSXBGuBL5lL4tJXpoJEftecphCh2SVQCjWMS2vhylc3AIQTg==
 
-markdown-it@^12.3.0:
-  version "12.3.0"
-  resolved "https://registry.npmjs.org/markdown-it/-/markdown-it-12.3.0.tgz#11490c61b412b8f41530319c005ecdcd4367171f"
-  integrity sha512-T345UZZ6ejQWTjG6PSEHplzNy5m4kF6zvUpHVDv8Snl/pEU0OxIK0jGg8YLVNwJvT8E0YJC7/2UvssJDk/wQCQ==
+markdown-it@^12.3.2:
+  version "12.3.2"
+  resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-12.3.2.tgz#bf92ac92283fe983fe4de8ff8abfb5ad72cd0c90"
+  integrity sha512-TchMembfxfNVpHkbtriWltGWc+m3xszaRD0CZup7GFFhzIgQqxIfn3eGj1yZpfuflzPvfkt611B2Q/Bsk1YnGg==
   dependencies:
     argparse "^2.0.1"
     entities "~2.1.0"
