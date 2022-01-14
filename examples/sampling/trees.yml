@@ -1,0 +1,24 @@
+sources:
+    omv:
+        type: MVT
+        url: https://interactive.data.api.platform.here.com/interactive/v1/catalogs/hrn:here:data::olp-here:dh-showcase-amsterdam/layers/trees/tile/web/{z}_{x}_{y}.mvt
+        url_params:
+            apiKey: wuhhFoo3HHQ8Bxw68fCZe8iA_J9v4dBnRhSbkAlMup4
+            mode: viz
+            vizSampling: low
+        tile_size: 512
+layers:
+    points:
+        data: {source: omv, layer: hrn:here:data::olp-here:dh-showcase-amsterdam:trees}
+        draw:
+            points:
+                order: 8
+                collide: false
+                size: [[1,'1px'], [14,'3px'], [16,'3px'], [17,'10px'], [18,'20px'], [20,'50px']]
+                color: 'rgba(200, 254, 182, 0.3)'
+                texture: 'icons/tree.png'
+            # lines:
+            #     order: 8
+            #     collide: false
+            #     width: 3px
+            #     color: 'rgba(120, 184, 122, 0.2)'

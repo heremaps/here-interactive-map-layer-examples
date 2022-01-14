@@ -1,0 +1,129 @@
+<!--
+  ~ Copyright (C) 2022 HERE Europe B.V.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  ~ SPDX-License-Identifier: Apache-2.0
+  ~ License-Filename: LICENSE
+  -->
+
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta name="twitter:card" content="summary_large_image" />
+   <meta name="twitter:site" content="@here" />
+   <meta name="twitter:title" content="Spatial and property search with interactive map layers" />
+   <meta name="twitter:description" content="Explore sport facilities in Amsterdam reachable by public transport using the spatial search offered by interactive map layers." />
+   <meta name="twitter:image" content="https://heremaps.github.io/here-interactive-map-layer-examples/spatial-and-property-search-2/opengraph.png" />
+   <meta property="og:url" content="https://heremaps.github.io/here-interactive-map-layer-examples/spatial-and-property-search-2/" />
+   <meta property="og:type" content="website" />
+   <meta property="og:title" content="Spatial and property search with interactive map layers" />
+   <meta property="og:description" content="Explore sport facilities in Amsterdam reachable by public transport using the spatial search offered by interactive map layers." />
+   <meta property="og:image" content="https://heremaps.github.io/here-interactive-map-layer-examples/spatial-and-property-search-2/opengraph.png" />
+
+   <title>Spatial and property search with interactive map layers</title>
+
+   <link rel="stylesheet" href="index.css" />
+   <script type="module" src="index.js"></script>
+</head>
+ <body>
+    <div id="map"></div>
+    <div id="overlay">
+      <h3>Sport facilities</h3>
+      <div id="overlay-sport">
+         <div class="descp"><span>Explore sport facilities in Amsterdam</span><span class="infoicon" value="2">&#9432;</span></div>
+         <p> that is reachable with each public transport line.</p>
+         <div id="sports">
+            <div class="line-parent"><div class="line" style="background: #55b6fc;"></div><input id="Skate" type="radio" name="sport" checked value="Skate"/><label for="Skate">Skate</label></div>
+            <div class="line-parent"><div class="line" style="background: #fc8c54;"></div><input id="Tennis" type="radio" name="sport" value="Tennis"/><label for="Tennis">Tennis</label></div>
+            <div class="line-parent"><div class="line" style="background: #9c56fb;"></div><input id="Basketball" type="radio" name="sport" value="Basketbal"/><label for="Basketball">Basketball</label></div>
+            <div class="line-parent"><div class="line" style="background: #7FFC54;"></div><input id="Soccer" type="radio" name="sport" value="Voetbal"/><label for="Soccer">Soccer</label></div>
+            <div class="line-parent"><div class="line" style="background: #919191;"></div><input id="Jeu" type="radio" name="sport" value="Jeu de boules"/><label for="Jeu">Jeu de boules</label></div>
+            <div class="line-parent"><div class="line" style="background: #BA0003;"></div><input id="Fitness" type="radio" name="sport" value="Fitness / Bootcamp"/><label for="Fitness">Fitness / Bootcamp</label></div>
+            <div class="line-parent"><div class="line" style="background: #035DBA;"></div><input id="Tabletennis" type="radio" name="sport" value="Tafeltennis"/><label for="Tabletennis">Table tennis</label></div>
+            <div class="line-parent"><div class="line" style="background: #00B086;"></div><input id="Beachvolley" type="radio" name="sport" value="Beachvolley"/><label for="Beachvolley">Beachvolley</label></div>
+            <div class="line-parent"><div class="line" style="background: #FEFF00;"></div><input id="Other" type="radio" name="sport" value="Overig"/><label for="Other">Other</label></div>
+         </div>
+      </div>
+
+      <div id="trams-lines">
+         <svg width="45" height="14">
+            <line x1="0" y1="9.5" x2="42" y2="9.5" style="stroke:#FF0000;stroke-width:2" shape-rendering="crispEdges"></line>
+         </svg>
+         <b>Tram</b>: <span>--</span><span class="infoicon" value="3">&#9432;</span>
+         <div>
+            <select name="trams" id="trams" multiple>
+            <option value="1">Line 1</option>
+            <option value="2">Line 2</option>
+            <option value="3">Line 3</option>
+            <option value="4">Line 4</option>
+            <option value="5">Line 5</option>
+            <option value="7">Line 7</option>
+            <option value="12">Line 12</option>
+            <option value="13">Line 13</option>
+            <option value="14">Line 14</option>
+            <option value="17">Line 17</option>
+            <option value="19">Line 19</option>
+            <option value="24">Line 24</option>
+            <option value="25">Line 25 (fasttram)</option>
+            <option value="26">Line 26</option>
+            </select>
+         </div>
+      </div>
+
+      <div id="metro-lines">
+         <svg width="45" height="14">
+            <line x1="0" y1="9.5" x2="42" y2="9.5" style="stroke:#0051FF;stroke-width:4" shape-rendering="crispEdges"></line>
+         </svg>
+         <b>Metro</b>: <span>--</span><span class="infoicon" value="4">&#9432;</span>
+         <div>
+            <select name="metro" id="metro" multiple>
+            <option value="50">Line 50</option>
+            <option value="51">Line 51</option>
+            <option value="52">Line 52</option>
+            <option value="53">Line 53</option>
+            <option value="54">Line 54</option>
+            </select>
+         </div>
+      </div>
+
+      <br/>
+      <div id="overlay-radius">
+         <div id="range"><span>Search for <b>Skate</b> along Tram</span><span class="infoicon" value="5">&#9432;</span><span> or Metro <b>lines</b> with radius of </span><span><b>500</b> meters.</span><input type="range" min="200" max="1000" value="500"></div>
+         
+      </div>
+    </div>
+
+    <div id="info" class="expanded">
+      <span class="resizeicon collapse"></span><span id="resizetext" class="hidden">Click to expand</span>
+      <div id="content">
+       <div id="intro">
+         <h3>HERE Interactive Map Layer: Spatial and Property Search</h3>
+
+         <p>Features stored in interactive map layers can be retrieved by spatial and/or property search queries. The spatial search query can be used to retrieve features that intersect a given point, line or area. This can be provided to the API as a GeoJSON geometry. Additionally, a radius parameter defined in meters could be specified.</p>
+         <p>The property search query can be used to retrieve features that have a property value that matches a given value. It is possible to search for numeric ranges, to query multiple property values, and to combine the queries using logical operators. Property search can be combined with requests for tile, bounding box and spatial search.</p>
+         <p>This example includes a map to explore sport facilities, public transport lines and stations in the city of Amsterdam. Amsterdam manages 26 sports parks, 19 sports centres, 10 swimming pools and over 100 smaller sports facilities in various neighbourhoods.</p>
+         <p>Selecting a line or station on the map or in the menu on the left side, will construct a geometry of all stations along the line as a Multipoint. Alternatively, a single station can be selected. The Point or Multipoint geometry is used as an input for the spatial search to filter the facilitues within a radius. This is combined with property search to return only the features with the selected sport type.</p>
+       </div>
+       <div id="source">
+         <p>This example uses: Interactive API, <a href="https://github.com/heremaps/xyz-maps">XYZ Maps</a></p>
+          <p>Data source: <a href="https://maps.amsterdam.nl/">City of Amsterdam</a></p>
+          <p>Source code: <a href="https://github.com/heremaps/here-interactive-map-layer-examples/blob/main/examples/spatial-and-property-search-2">GitHub</a></p>
+       </div> 
+      </div>
+    </div>
+    <div id="request-info"><div id="requests"></div><span class="infoicon" value="1">&#9432;</span></div>
+    <div id="ancher-point1"></div>
+    <div id="ancher-point2"></div>
+ </body>
+</html>
