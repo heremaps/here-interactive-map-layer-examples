@@ -1,7 +1,7 @@
 {
   "name": "@here/here-interactive-map-layer-examples-vizsampling",
   "version": "1.0.0",
-  "description": "Data sampling with Interactive Map Layers",
+  "description": "Data sampling with interactive map layers",
   "scripts": {
     "build": "rollup -c",
     "start": "yarn run build && npx http-server ./dist/ -p 0 -c-1 -o",

@@ -1,10 +1,10 @@
 # HERE Interactive Map Layer Examples: Data Sampling
 
-One of the features offered by Interactive Map Layers is data sampling. Data sampling enables clients to efficiently render an excerpt of a very large data set for visual reference and analysis, without the need to retrieve all the data.
+One of the features offered by interactive map layers is data sampling. Data sampling enables clients to efficiently render an excerpt of a very large data set for visual reference and analysis, without the need to retrieve all the data.
 
 This example includes a cadastral map to explore the trees in maintenance of the city of Amsterdam, stored as individual map features. On map zoom levels, where there are too many features, the tiles returned by Interactive API include only a sample with a geographically accurate representation of the data.
 
-![Sampling with Interactive Map Layer](./opengraph.png)
+![Sampling with interactive map layers](./opengraph.png)
 
 __[Live example](https://heremaps.github.io/here-interactive-map-layer-examples/examples/sampling/index.html)__
 

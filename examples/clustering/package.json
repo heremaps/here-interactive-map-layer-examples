@@ -1,7 +1,7 @@
 {
   "name": "@here/here-interactive-map-layer-examples-open-layers",
   "version": "1.0.0",
-  "description": "Clustering with Interactive Map Layers",
+  "description": "Clustering with interactive map layers",
   "scripts": {
     "build": "rollup -c",
     "start": "yarn run build && npx http-server ./dist/ -p 0 -c-1 -o",

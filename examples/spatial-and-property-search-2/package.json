@@ -1,7 +1,7 @@
 {
   "name": "@here/here-interactive-map-layer-examples-sport-facilities-public-transport",
   "version": "1.0.0",
-  "description": "Spatial and property search with Interactive Map Layers. Example 2",
+  "description": "Spatial and property search with interactive map layers. Example 2",
   "scripts": {
     "build": "rollup -c",
     "start": "yarn run build && npx http-server . -d -c-1 -p 0 -o ./dist/index.html",

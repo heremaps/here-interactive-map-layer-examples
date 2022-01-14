@@ -41,9 +41,9 @@ function tour() {
     })
 
     tour.addStep({
-      title: "<h3>Data Sampling with Interactive Map Layers</h3>",
+      title: "<h3>Data sampling with interactive map layers</h3>",
       text:
-          "<p>One of the features offered by Interactive Map Layers is data sampling. Data sampling enables clients to efficiently render an excerpt of a very large data set for visual reference and analysis, without the need to retrieve all the data.</p>"+
+          "<p>One of the features offered by interactive map layers is data sampling. Data sampling enables clients to efficiently render an excerpt of a very large data set for visual reference and analysis, without the need to retrieve all the data.</p>"+
           "<p>This example includes a cadastral map to explore the trees in maintenance of the city of Amsterdam. Each of the <b>259,431</b> trees is stored as an individual map feature.</p>"+
           "<p>By including the parameter <i>mode=viz</i> the Interactive API is instructed to return the data optimized for visualization. On map zoom levels, where there are too many features, the tiles returned by Interactive API include only a sample with a geographically accurate representation of the data.</p>",
       // attachTo: {
@@ -75,7 +75,7 @@ function tour() {
     
     tour.addStep({
       title: `Filter by tree species.`,
-      text: "The species of the tree is stored as a property in each feature. Interactive Map Layer offers the capability to query selected features using property search. The property search could be combined with spatial requests.",
+      text: "The species of the tree is stored as a property in each feature. Interactive map layers offer the capability to query selected features using property search. The property search could be combined with spatial requests.",
       attachTo: {
         element: '#overlay-trees',
         on: 'auto'

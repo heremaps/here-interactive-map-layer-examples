@@ -1,10 +1,10 @@
 # HERE Interactive Map Layer Examples: Clustering
 
-Interactive Map Layers offer the capability to retrieve statistical information for the data stored in the layer. Both hexagonal and square grid clustering are supported.
+Interactive map layers offer the capability to retrieve statistical information for the data stored in the layer. Both hexagonal and square grid clustering are supported.
 
-The example shows how Interactive Map Layer is used to demonstrate the density of supermarket coverage in the UK. The supermarket retail points are stored in an Interactive Map Layer. The layer is then queried to retrieve the individual points, the density of all supermarkets, and the density of each supermarket chain.
+The example shows how interactive map layers are used to demonstrate the density of supermarket coverage in the UK. The supermarket retail points are stored in an interactive map layer. The layer is then queried to retrieve the individual points, the density of all supermarkets, and the density of each supermarket chain.
 
-![Clustering with Interactive Map Layer](./opengraph.png)
+![Clustering with interactive map layers](./opengraph.png)
 
 __[Live example](https://heremaps.github.io/here-interactive-map-layer-examples/examples/clustering/index.html)__
 

@@ -1,11 +1,11 @@
 # HERE Interactive Map Layer Examples
 
-This repository contains examples for Interactive Map Layers - one of the [supported data layer types](https://developer.here.com/documentation/data-user-guide/user_guide/portal/layers/layers.html) on [HERE platform](https://www.here.com/platform). Interactive Map Layers offer a set of unique capabilities, enabling you to store, retrieve, search for, analyze and modify data at a feature (e.g., a place) and feature property (e.g., the name of the place) level.
+This repository contains examples for interactive map layers - one of the [supported data layer types](https://developer.here.com/documentation/data-user-guide/user_guide/portal/layers/layers.html) on [HERE platform](https://www.here.com/platform). Interactive map layers offer a set of unique capabilities, enabling you to store, retrieve, search for, analyze and modify data at a feature (e.g., a place) and feature property (e.g., the name of the place) level.
 
-The API behind Interactive Map Layers is the [Interactive API](https://developer.here.com/documentation/data-api/api-reference-interactive.html).
+The API behind interactive map layers is the [Interactive API](https://developer.here.com/documentation/data-api/api-reference-interactive.html).
 
 
-![Clustering with Interactive Map Layers](examples/sampling/opengraph.png)
+![Clustering with interactive map layers](examples/sampling/opengraph.png)
 
 ## Examples
 
@@ -13,7 +13,7 @@ The API behind Interactive Map Layers is the [Interactive API](https://developer
 
 __[Source Code](examples/simplification) - [Live Map](https://heremaps.github.io/here-interactive-map-layer-examples/examples/simplification/index.html)__
 
-Map features stored in Interactive Map Layers can be retrieved as tiles. Interactive Map Layers offers the ability to simplify the geometry of the features in the tiles. This can be useful for reducing the amount of data that needs to be transferred to the client and helps the client to render the data faster.
+Map features stored in interactive map layers can be retrieved as tiles. interactive map layers offer the ability to simplify the geometry of the features in the tiles. This can be useful for reducing the amount of data that needs to be transferred to the client and helps the client to render the data faster.
 
 In this example two very long routes were created using [HERE Routing API](https://developer.here.com/documentation/routing-api/dev_guide/index.html). The tiles returned by Interactive API, contain a simplified version of the route geometry optimized for the zoom level of the map. 
 
@@ -21,7 +21,7 @@ In this example two very long routes were created using [HERE Routing API](https
 
 __[Source Code](examples/sampling) - [Live Map](https://heremaps.github.io/here-interactive-map-layer-examples/examples/sampling/index.html)__
 
-One of the features offered by Interactive Map Layers is data sampling. Data sampling enables clients to efficiently render an excerpt of a very large data set for visual reference and analysis, without the need to retrieve all the data.
+One of the features offered by interactive map layers is data sampling. Data sampling enables clients to efficiently render an excerpt of a very large data set for visual reference and analysis, without the need to retrieve all the data.
 
 This example includes a cadastral map to explore the trees in maintenance of the city of Amsterdam, stored as individual map features. On map zoom levels, where there are too many features, the tiles returned by Interactive API include only a sample with a geographically accurate representation of the data.
  
@@ -29,15 +29,15 @@ This example includes a cadastral map to explore the trees in maintenance of the
 
 __[Source Code](examples/clustering) - [Live Map](https://heremaps.github.io/here-interactive-map-layer-examples/examples/clustering/index.html)__
 
-Interactive Map Layers offer the capability to retrieve statistical information for the data stored in the layer. Both hexagonal and square grid clustering are supported.
+Interactive map layers offer the capability to retrieve statistical information for the data stored in the layer. Both hexagonal and square grid clustering are supported.
 
-The example shows how Interactive Map Layer is used to demonstrate the density of supermarket coverage in the UK. The supermarket retail points are stored in an Interactive Map Layer. The layer is then queried to retrieve the individual points, the density of all supermarkets, and the density of each supermarket chain.
+The example shows how interactive map layers are used to demonstrate the density of supermarket coverage in the UK. The supermarket retail points are stored in an interactive map layer. The layer is then queried to retrieve the individual points, the density of all supermarkets, and the density of each supermarket chain.
 
 ### Spatial and Property Search 
 
-Features stored in Interactive Map Layers can be retrieved by spatial and/or property search queries. The spatial search query could be used to retrieve features that intersect a given point, line or area. This is provided to the API as a GeoJSON geometry. Additionally, a radius parameter defined in meters could be specified.
+Features stored in interactive map layers can be retrieved by spatial and/or property search queries. The spatial search query can be used to retrieve features that intersect a given point, line or area. This is provided to the API as a GeoJSON geometry. Additionally, a radius parameter defined in meters could be specified.
 
-The property search query could be used to retrieve features that have a property value that matches a given value. It is possible to search for numeric ranges, to query multiple property values, and to combine the queries using logical operators. Property search can be combined with requests for tile, bounding box and spatial search.
+The property search query can be used to retrieve features that have a property value that matches a given value. It is possible to search for numeric ranges, to query multiple property values, and to combine the queries using logical operators. Property search can be combined with requests for tile, bounding box and spatial search.
 
 #### Example 1
 

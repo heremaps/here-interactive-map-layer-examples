@@ -41,8 +41,8 @@ function tour(map) {
     })
 
     tour.addStep({
-      title: "<h3>Geometry simplification with Interactive Map Layers</h3>",
-      text: "<p>Map features stored in Interactive Map Layers can be retrieved as tiles. Interactive Map Layers offers the ability to simplify the geometry of the features in the tiles by simply including the parameter <i>mode=viz</i>. This can be useful for reducing the amount of data that needs to be transferred to the client and helps the client to render the data faster.</p>"+
+      title: "<h3>Geometry simplification with interactive map layers</h3>",
+      text: "<p>Map features stored in interactive map layers can be retrieved as tiles. interactive map layers offer the ability to simplify the geometry of the features in the tiles by simply including the parameter <i>mode=viz</i>. This can be useful for reducing the amount of data that needs to be transferred to the client and helps the client to render the data faster.</p>"+
         "<p>In this example two very long routes, containing <b>31,600</b> and <b>22,408</b> coordinates respectively, were created using the HERE Routing API. The tiles returned by Interactive API, contain a simplified version of the route geometry optimized for the zoom level of the map. There is no visual difference between the original and the simplified geometry at the requested zoom level. However, the simplified geometry contains a significantly reduced number of coordinates.</p>",
       // attachTo: {
       //   element: ''
@@ -71,7 +71,7 @@ function tour(map) {
     });
     
     tour.addStep({
-      title: `Click to show one of the precalculated routes stored in an Interactive Map Layer.`,
+      title: `Click to show one of the precalculated routes stored in an interactive map layer.`,
       attachTo: {
         element: '#firstpart',
         on: 'auto'
@@ -103,7 +103,7 @@ function tour(map) {
     
     tour.addStep({
       title: "Shows the route geometry simplification information at the current zoom level.",
-      text:  "Interactive Map Layer simplifies the geometry of the route optimized for the requested zoom level. There is no visual difference between the original and the simplified geometry at the requested zoom level. However, the simplified geometry contains a significantly reduced number of coordinates.",
+      text:  "Interactive map layers simplify the geometry of the route optimized for the requested zoom level. There is no visual difference between the original and the simplified geometry at the requested zoom level. However, the simplified geometry contains a significantly reduced number of coordinates.",
       attachTo: {
         element: '#secondpart',
         on: 'right'

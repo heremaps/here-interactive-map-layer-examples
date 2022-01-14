@@ -41,11 +41,11 @@ function tour() {
     })
 
     tour.addStep({
-        title: "<h3>Clustering with HERE Interactive Map Layers</h3>",
+        title: "<h3>Clustering with interactive map layers</h3>",
         text:
-            "<p>Interactive Map Layers offer the capability to retrieve statistical information for the data stored in the layer. This could include information about the values of a property or simply the count of features in the cluster. Interactive Map Layer supports hexagonal and square grid clustering.</p>"+
-            "<p>The example shows how Interactive Map Layer is used to demonstrate the density of supermarket coverage in the UK. The supermarket retail points are stored in an Interactive Map Layer. The layer is then queried to retrieve the individual points, the density of all supermarkets, and the density of each supermarket chain.</p>"+
-            "<p>To represent the density, the supermarket data is requested as hexagonal and square grid clusters from the Interactive Map Layer. The returned features represent the cluster cells and include the count of the features inside. The map client displays the cells in a color that represents the density of the supermarkets in it. Brighter cells indicate a bigger number of supermarkets and respectively higher density.</p>",
+            "<p>Interactive map layers offer the capability to retrieve statistical information for the data stored in the layer. This could include information about the values of a property or simply the count of features in the cluster. Interactive map layers support hexagonal and square grid clustering.</p>"+
+            "<p>The example shows how interactive map layers are used to demonstrate the density of supermarket coverage in the UK. The supermarket retail points are stored in an interactive map layer. The layer is then queried to retrieve the individual points, the density of all supermarkets, and the density of each supermarket chain.</p>"+
+            "<p>To represent the density, the supermarket data is requested as hexagonal and square grid clusters from the interactive map layer. The returned features represent the cluster cells and include the count of the features inside. The map client displays the cells in a color that represents the density of the supermarkets in it. Brighter cells indicate a bigger number of supermarkets and respectively higher density.</p>",
         // attachTo: {
         //   element: ''
         //   on: 'auto'
@@ -74,7 +74,7 @@ function tour() {
     
     tour.addStep({
       title: "Filter by supermarket retail chain.",
-      text: "The name of the chain is stored as a property in each feature. Interactive Map Layer offers the capability to query selected features using property search. The property search could be combined with spatial and clustering requests.",
+      text: "The name of the chain is stored as a property in each feature. Interactive map layers offer the capability to query selected features using property search. The property search could be combined with spatial and clustering requests.",
       cancelIcon: {
           enabled: true
       },
@@ -153,7 +153,7 @@ function tour() {
 
 
     tour.addStep({
-      title: "Interactive Map Layer will automatically select a suitable resolution of the clustering grid based on the current zoom level.",
+      title: "The interactive map layer will automatically select a suitable resolution of the clustering grid based on the current zoom level.",
       text: "Set the parameter <i>relativeResolution</i> for the clustering request to increase or decrease the automatically selected resolution.",
       attachTo: {
         element: '#slider',

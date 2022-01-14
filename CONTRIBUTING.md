@@ -1,6 +1,6 @@
 # Contributing Guidelines
 
-The team behind the [HERE interactive map layer examples](https://github.com/heremaps/here-interactive-map-layer-examples) gratefully accepts contributions via
+The team behind the [HERE Interactive Map Layer Examples](https://github.com/heremaps/here-interactive-map-layer-examples) gratefully accepts contributions via
 [pull requests](https://help.github.com/articles/about-pull-requests/) filed against the
 [GitHub project](https://github.com/heremaps/here-interactive-map-layer-examples/pulls).
 

@@ -1,7 +1,7 @@
 {
   "name": "@here/here-interactive-map-layer-examples-simplification",
   "version": "1.0.0",
-  "description": "Geometry simplification with Interactive Map Layers",
+  "description": "Geometry simplification with interactive map layers",
   "scripts": {
     "build": "rollup -c",
     "start": "yarn run build && npx http-server ./dist/ -p 0 -c-1 -o",
