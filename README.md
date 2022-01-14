@@ -13,7 +13,7 @@ The API behind interactive map layers is the [Interactive API](https://developer
 
 __[Source Code](examples/simplification) - [Live Map](https://heremaps.github.io/here-interactive-map-layer-examples/examples/simplification/index.html)__
 
-Map features stored in interactive map layers can be retrieved as tiles. interactive map layers offer the ability to simplify the geometry of the features in the tiles. This can be useful for reducing the amount of data that needs to be transferred to the client and helps the client to render the data faster.
+Map features stored in interactive map layers can be retrieved as tiles. Interactive map layers offer the ability to simplify the geometry of the features in the tiles. This can be useful for reducing the amount of data that needs to be transferred to the client and helps the client to render the data faster.
 
 In this example two very long routes were created using [HERE Routing API](https://developer.here.com/documentation/routing-api/dev_guide/index.html). The tiles returned by Interactive API, contain a simplified version of the route geometry optimized for the zoom level of the map. 
 
