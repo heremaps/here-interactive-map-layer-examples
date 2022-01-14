@@ -18,9 +18,9 @@
  */
 #meter-container{
   position: absolute; 
-  left: 130px; 
-  top: 300px; 
+  left: 135px; 
   width: 200px;
+  top: 290px;
   height: 250px; 
 }
 
@@ -53,9 +53,9 @@
 .info3 {
   position: absolute; 
   font-size: 14px; 
-  text-align: left; 
+  text-align: center; 
   top: 150px;
-  left: -10px;
+  left: -22px;
   width: 200px;
   white-space: nowrap;
 }

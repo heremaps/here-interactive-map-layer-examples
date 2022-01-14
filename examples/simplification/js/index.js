@@ -105,17 +105,17 @@ function main(lat, lon, zoom) {
         "pm": [1, 3, 7, 13, 25, 43, 65, 84, 95, 99, 100]
     };
     routinga.addEventListener('click', function(){
-        mapmvt.flyTo(hw, 6);
+        mapmvt.flyTo(pm, 5);
         a.classList.remove("hidden");
         b.classList.add("hidden");
-
+        
         setScale("hw");
     })
 
     routingb.addEventListener('click', function(){
-        mapmvt.flyTo(pm, 5);
-        b.classList.remove("hidden");
+        mapmvt.flyTo(hw, 6);
         a.classList.add("hidden");
+        b.classList.remove("hidden");
 
         setScale("pm");
     })
@@ -133,7 +133,7 @@ function main(lat, lon, zoom) {
 
     var crtzl = 0
     function setScaleValue(zoomlevel){
-        var pn = a.classList.contains("hidden") ? 'pm' : 'hw';
+        var pn = a.classList.contains("hidden") ? 'hw' : 'pm';
         let effectivez = Math.max(1, Math.min(zoomlevel,11));
         scalezlevel[crtzl].style['font-weight'] = 400;
         pointsCounts[crtzl].style['font-weight'] = 400;

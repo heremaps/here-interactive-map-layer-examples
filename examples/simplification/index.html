@@ -47,17 +47,19 @@
       <div id="firstpart">
         <div class="descp"><span>Select a route:</span><span class="infoicon" value="1">&#9432;</span></div>
         <div id="buttons">
-          <div id="routb" class="button" value="b">Paris -> Moscow</div>
-          <div id="routa" class="button" value="a">Houston -> Washington D.C.</div>
+          <div id="routa" class="button" value="a">Paris -> Moscow</div>
+          <div id="routb" class="button" value="b">Houston -> Washington D.C.</div>
         </div>
       </div>
       <div id="secondpart">
         <br/>
-        <div class="descp"><span>Interactive map layers reduce the</span><span class="infoicon" value="2">&#9432;</span></div>
+        <div class="descp"><span>The geometry size of the route </span><span class="infoicon" value="2">&#9432;</span></div>
 
-        <p id="a">geometry size of the route from Houston to Washington D.C. from <b>22408</b> to <b>1426</b> at zoom level <b>1</b> </p>
-        <p id="b" class="hidden">geometry size of the route from Paris to Moscow from <b>31600</b> to <b>2336</b> at zoom level <b>1</b></p>
-      
+        <div class="routedescp">
+          <p id="a">Paris to Moscow is reduced from <b>31600</b> to <b>2336</b> coordinates at zoom level <b>1</b> </p>
+          <p id="b" class="hidden">Houston to Washington D.C. is reduced from <b>22408</b> to <b>1426</b> coordinates at zoom level <b>1</b></p>
+        </div>
+
         <div id="scale">
           <div id="gradulation">
             <span class="zlevel">1&nbsp;</span><span class="pointscnt">- 350</span><br>
@@ -77,7 +79,7 @@
             <line x1="0" y1="9.5" x2="141" y2="9.5" style="stroke:#ef2110;stroke-width:6" shape-rendering="crispEdges"></line>
           </svg> -->
 
-          <div id="meter-container">
+          <div id="meter-container" class="pm">
             <div class="meter">
               <div class="graduation graduation1"></div>
               <div class="graduation graduation2"></div>
