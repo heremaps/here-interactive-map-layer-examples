@@ -41,13 +41,13 @@ The property search query can be used to retrieve features that have a property 
 
 #### Example 1
 
-__[Source Code](examples/sport-facilities) - [Live Map](https://heremaps.github.io/here-interactive-map-layer-examples/examples/spatial-and-property-search-1/index.html)__
+__[Source Code](examples/spatial-and-property-search-1) - [Live Map](https://heremaps.github.io/here-interactive-map-layer-examples/examples/spatial-and-property-search-1/index.html)__
 
 This example includes a map to explore sport facilities in the city of Amsterdam. Property search is used to filter the features by the type of sport. The locations of the facilities are then used as an input for the spatial search query to find the administrative areas that contain the facilities of that type. 
 
 #### Example 2
 
-__[Source Code](examples/sport-facilities-public-transport) - [Live Map](https://heremaps.github.io/here-interactive-map-layer-examples/examples/spatial-and-property-search-2/index.html)__
+__[Source Code](examples/spatial-and-property-search-2) - [Live Map](https://heremaps.github.io/here-interactive-map-layer-examples/examples/spatial-and-property-search-2/index.html)__
 
 This example includes a map to explore sport facilities, public transport lines and stations in the city of Amsterdam. Property search is used to filter the features by the sport type. It is combined with spatial search to find the facilities of that type located near a selected public transport station or all of the stations for a selected transport line.
 
